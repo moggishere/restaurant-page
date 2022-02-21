@@ -1,4 +1,4 @@
-
+import { renderHome } from './modules/home';
 import './style.css'
 
 function component() {
@@ -57,6 +57,19 @@ function component() {
   navbarList.appendChild(findUsBtn);
 
   navbar.appendChild(navbarList);
+
+  homeBtn.addEventListener('click', e => {
+    console.log('you clicked home')
+    renderHome();
+  })
+
+  menuBtn.addEventListener('click', e => {
+    console.log('you clicked menu')
+  })
+
+  findUsBtn.addEventListener('click', e => {
+    console.log('you clicked find us')
+  })
 
   document.body.appendChild(navbar);
 
